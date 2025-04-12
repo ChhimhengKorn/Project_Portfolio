@@ -69,3 +69,13 @@ editor.addEventListener("input", () => {
 
 // Trigger initial load for the editor
 editor.dispatchEvent(new Event("input"));
+
+// Burger Menu Toggle Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const burgerMenu = document.querySelector(".burger-menu");
+  const navLinks = document.querySelector(".nav-links");
+
+  burgerMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+});
