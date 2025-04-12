@@ -140,3 +140,47 @@
     font-size: 0.875rem;
     color: #8b949e;
   }
+
+  /* Burger menu styles */
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+
+  /* Hide nav links on small screens */
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #0d1117;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 1rem;
+      border: 1px solid #30363d;
+      border-radius: 5px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+  }
